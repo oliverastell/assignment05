@@ -1,5 +1,5 @@
 {
-  "language": [
+  "Language": [
     "Python",
     "C",
     "Java",
@@ -11,7 +11,7 @@
     "Visual Basic",
     "Rust"
   ],
-  "tiobe_ranking": [
+  "Tiobe Ranking": [
     "20.86%",
     "11.48%",
     "8.89%",
@@ -22,6 +22,10 @@
     "1.88%",
     "1.69%",
     "1.63%"
+  ],
+  "Created By": [
+    "Guido van Rossum",
+    "Dennis Ritchie"
   ]
 
 }

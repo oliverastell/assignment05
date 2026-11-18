@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fun-overlay {
+    position: absolute;
+    z-index: -1;
+
+    background: url('/svg/noise.svg') repeat;
+    opacity: 1;
+    mix-blend-mode: multiply;
+
+    width: 100%;
+    height: 100%;
+}
+
+.fun-gradient {
+    position: absolute;
+    z-index: -2;
+
+    background-color: #191D2CFF;
+    background-image:
+        radial-gradient(at 5vw 42vw, hsla(240,47%,51%, 0.6) 0px, transparent 50%),
+        radial-gradient(at 49vw 79vw, hsla(283,71%,27%, 0.6) 0px, transparent 50%),
+        radial-gradient(at 39vw 16vw, hsla(240,49%,34%, 0.6) 0px, transparent 50%),
+        radial-gradient(at 86vw 61vw, hsla(343,50%,48%, 0.6) 0px, transparent 50%);
+
+    width: 100%;
+    height: 100%;
+}
+
+html, body {
+    visibility: visible;
+    position: relative;
+    color: white;
+    font-family: "Roboto Light", sans-serif;
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.mono-text {
+    font-family: "JetBrains Mono", monospace;
+}
+
+nav {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+
+    position: sticky;
+    top: 0;
+
+    flex-direction: row;
+}
+
+#content {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 32px;
+
+    min-height: 100dvh;
+}
+
+#content > * {
+    min-width: 200px;
+    max-width: 800px;
+    width: 100%;
+}
+
+#main-window {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    gap: 16px;
+
+    flex-grow: 1;
+    border-radius: 6px;
+    width: 100%;
+    padding: 32px;
+    border: #555566 1px solid;
+    align-items: center;
+    background: #191d2c;
+}
+
+.title {
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* Graph Selection */
+.graph-selection-bar {
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: row;
+    overflow: scroll;
+
+    gap: 16px;
+}
+
+.graph-selection-bar > * {
+    flex-grow: 1;
+}
+
+/* Fancy Buttons */
+.btn {
+    cursor: pointer;
+    color: white;
+
+    padding: 8px;
+    font-size: 1em;
+
+    background: none;
+
+    border: none;
+
+}
+
+.highlighted-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+    transition: 0.25s;
+    transition-property: background-color;
+}
+
+.highlighted-button > * {
+    width: 100%;
+    height: 100%;
+}
+
+.highlighted-button:hover {
+    background: #555566FF;
+}
+
+.underlined-button {
+    border-bottom: #555566 1px solid;
+
+    transition: 0.35s;
+    transition-property: border-bottom-color;
+}
+
+.underlined-button:hover {
+    background: linear-gradient(
+        transparent 0%,
+        #55556622 100%
+    );
+    border-bottom: #FFFFFFFF 1px solid;
+}
+
+/* Table Graph Stuff */
+#graph-content {
+}
+
+#graph-content table {
+    width: 100%;
+    table-layout: fixed;
+
+    border-collapse: collapse;
+}
+
+#graph-content table tr:first-child {
+    background-color: #55556644;
+}
+
+#graph-content table tr:not(:first-child):nth-child(odd) {
+    background-color: #55556622;
+}
+
+#graph-content tr > * {
+    text-align: center;
+    padding: 8px 8px;
+}
+
+#graph-content tr > * {
+    border-left: #555566 1px solid;
+    border-right: #555566 1px solid;
+}
+
+#graph-content tr:first-child > * {
+    border-top: #555566 1px solid;
+}
+
+#graph-content tr:last-child > * {
+    border-bottom: #555566 1px solid;
+
+    border-bottom-right-radius: 16px;
+}
+
+/* Animation for the cursor */
+@keyframes blinkingAnimation {
+    0% {visibility: hidden;}
+    50% {visibility: hidden;}
+    100% {visibility: visible;}
+}
+
+.blinking {
+    animation: blinkingAnimation 2s infinite;
+}

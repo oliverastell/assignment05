@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programming Language Stats</title>
+</head>
+<body>
+  <div class="fun-overlay"></div>
+  <div class="fun-gradient"></div>
+
+
+  <nav>
+    <button class="btn highlighted-button">
+      <img src="/svg/hamburger.svg" aria-hidden="true" alt="Menu">
+    </button>
+    <div class="mono-text">
+      Programming Language Stats<span class="blinking">▉</span>
+    </div>
+  </nav>
+
+  <!-- hodls all thje pages main stuff that isnt the navbar -->
+  <div id="content">
+    <header>
+      <h1 id="title" class="mono-text title">Programming Language Stats<span class="blinking">▉</span></h1>
+    </header>
+    <main id="main-window">
+      <p>
+        Hello,
+        I've acquired a few stats to help you figure out which programming language you should learn next.
+        Hope you enjoy.
+      </p>
+
+      <div class="graph-selection-bar">
+        <button id="choose-lang-by-difficulty" class="btn underlined-button">
+          Programming Languages by Difficulty (HTML)
+        </button>
+
+        <button id="choose-lang-by-popularity" class="btn underlined-button">
+          Programming Languages by Popularity (JSON)
+        </button>
+      </div>
+
+      <div id="graph-content">
+
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/index.js" type="module"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</body>
+</html>
